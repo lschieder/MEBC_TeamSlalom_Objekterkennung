@@ -1,6 +1,10 @@
 
 
+# Prototyp: MEBC - TeamSlalom - Objekterkennung
 
+Autor: Laurin Schieder
+
+Version: 28.10.2025
 
 
 
@@ -29,7 +33,7 @@ python -c "import torch; print(torch.cude.get_device_name(0))"
 
 ### Labels erstellen
 
-
+Zb. Mit Labelstudio
 
 ### Datenstruktur vorbereiten
 
@@ -62,13 +66,6 @@ names: ["class1", "class2", "class3", "class4", "class5"]
 yolo detect train data=data.yaml model=yolo11s.pt epochs=60 imgsz=640
 ```
 
-### Modell-Inferenz (auf Webcam, Bildern oder Videos ausführen)
+Das Modell wird dann als pt datei gespeichert bzw die weights unter `Objectdetection\runs\detect\train\weigts`
 
-curl -o yolo_detect.py https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/yolo_detect.py
-python yolo_detect.py --model=runs/detect/train/weights/best.pt --source=usb0
 
-### Beispiel für Video-Inferenz mit festgelegter Auflösung:
-
-python yolo_detect.py --model=yolo11s.pt --source=test_vid.mp4 resolution=1280x720
-
-### Fertig! Modelle und Trainingsgraphen findest du unter: runs/detect/train/
