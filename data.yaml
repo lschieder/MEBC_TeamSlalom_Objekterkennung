@@ -1,0 +1,7 @@
+path: C:\Objectdetection\Objectdetection\data
+train: train\images
+val: validation\images
+
+nc: 2
+
+names: ["EndBoje", "KursBoje"]

@@ -1,4 +1,2 @@
-penny
-nickel
-dime
-quarter
+KursBoje
+EndBoje
